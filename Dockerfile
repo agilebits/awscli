@@ -17,8 +17,9 @@ RUN adduser -h /home/aws -s /bin/bash -D aws
 
 USER aws
 WORKDIR /home/aws
+COPY entrypoint.sh /
 
 RUN echo "export PAGER='less -R'" >> .profile
 VOLUME ["/home/aws/.aws"]
 
-CMD ["/bin/bash", "--login"]
+ENTRYPOINT ["/entrypoint.sh"]
