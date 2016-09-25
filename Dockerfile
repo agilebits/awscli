@@ -13,8 +13,10 @@ RUN apk update && apk --no-cache add \
 pip install --upgrade \
 	awscli
 
-RUN adduser -h /home/awsuser -s /bin/bash -D awsuser
-WORKDIR /home/awsuser
-VOLUME ["/home/awsuser/.aws"]
+RUN adduser -h /home/aws -s /bin/bash -D aws
+
+USER aws
+WORKDIR /home/aws
+VOLUME ["/home/aws/.aws"]
 
 CMD ["/bin/bash", "--login"]
