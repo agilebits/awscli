@@ -13,9 +13,6 @@ RUN apk update && apk --no-cache add \
 pip install --upgrade \
 	awscli
 
-RUN curl -s -o /usr/local/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest && \
-	chmod a+x /usr/local/bin/ecs-cli
-
 RUN adduser -h /home/aws -s /bin/bash -D aws
 
 USER aws
