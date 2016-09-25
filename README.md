@@ -6,7 +6,7 @@ This repository is used to build a small Alpine Linux-based container with Amazo
 
 ```bash
 	mkdir ~/.aws
-	docker run -it --rm -v ~/.aws:/home/awsuser/.aws roustem/awscli
+	docker run -it --rm -v ~/.aws:/home/aws/.aws roustem/awscli
 	aws configure
 ```
 
