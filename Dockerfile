@@ -10,7 +10,7 @@ RUN apk update && apk --no-cache add \
 	groff \
 	python \
 	py-pip && \
-pip install --upgrade \
+	pip install --upgrade \
 	awscli
 
 RUN adduser -h /home/aws -s /bin/bash -D aws
